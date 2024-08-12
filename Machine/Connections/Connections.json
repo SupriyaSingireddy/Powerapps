@@ -1,0 +1,49 @@
+{
+  "32914bcd-b4a3-49d0-bbbe-a46c22c9940d": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1702/1.0.1702.3810/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "32914bcd-b4a3-49d0-bbbe-a46c22c9940d"
+  },
+  "b8d2c6eb-3772-45c7-9866-ba9674e898a1": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://cognine1-my.sharepoint.com/personal/supriya_singireddy_cognine_com": {
+        "dataSources": {
+          "Machine order": {
+            "tableName": "ccffb9b5-c9fe-494b-b6bf-662b1008311b"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Machine order"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "b8d2c6eb-3772-45c7-9866-ba9674e898a1"
+  }
+}

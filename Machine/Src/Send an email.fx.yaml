@@ -1,0 +1,73 @@
+"'Send an email' As screen":
+
+    Label7 As label:
+        Align: =Align.Center
+        Fill: =RGBA(214, 223, 238, 1)
+        Height: =107
+        Size: =20
+        Text: ="Send an email"
+        Width: =1365
+        ZIndex: =1
+
+    Label8 As label:
+        Align: =Align.Center
+        Height: =99
+        Text: ="To"
+        Width: =435
+        Y: =107
+        ZIndex: =2
+
+    Label9 As label:
+        Align: =Align.Center
+        Height: =124
+        Text: ="Subject"
+        Width: =435
+        Y: =247
+        ZIndex: =3
+
+    Label10 As label:
+        Align: =Align.Center
+        Height: =205
+        Text: ="Body"
+        Width: =435
+        Y: =439
+        ZIndex: =4
+
+    TextInput2 As text:
+        Default: ="Text input"
+        Height: =140
+        Width: =710
+        X: =655
+        Y: =107
+        ZIndex: =5
+
+    TextInput2_1 As text:
+        Default: ="Text input"
+        Height: =140
+        Width: =710
+        X: =655
+        Y: =239
+        ZIndex: =6
+
+    TextInput2_2 As text:
+        Default: ="Text input"
+        Height: =252
+        Width: =710
+        X: =655
+        Y: =379
+        ZIndex: =7
+
+    Button1 As button:
+        OnSelect: =
+        Text: ="Send"
+        X: =1160
+        Y: =692
+        ZIndex: =8
+
+    Button1_1 As button:
+        OnSelect: =Reset(TextInput2_1);Reset(TextInput2);Reset(TextInput2_2)
+        Text: ="Clear"
+        X: =87
+        Y: =692
+        ZIndex: =9
+

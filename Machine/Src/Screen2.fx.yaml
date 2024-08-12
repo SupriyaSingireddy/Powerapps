@@ -1,0 +1,38 @@
+Screen2 As screen:
+
+    Dropdown2 As dropdown:
+        Items: =["small", "Large" , "Medium"]
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Label5 As label:
+        Size: =If(Dropdown2.Selected.Value = "small", 10, Dropdown2.Selected.Value = "Large", 25)
+        Text: ="Large"
+        X: =40
+        Y: =130
+        ZIndex: =2
+
+    Checkbox1 As checkbox:
+        OnCheck: =
+        OnUncheck: =
+        Text: ="Option"
+        X: =525
+        Y: =125
+        ZIndex: =3
+
+    Label6 As label:
+        Height: =60
+        Text: ="Are you a new client"
+        Width: =232
+        X: =644
+        Y: =125
+        ZIndex: =4
+
+    TextInput1 As text:
+        Default: ="Text input"
+        Visible: =Checkbox1.Value
+        X: =440
+        Y: =235
+        ZIndex: =5
+

@@ -1,0 +1,301 @@
+"'Submit Success Screen' As screen":
+
+    Label2 As label:
+        Align: =Align.Center
+        Height: =132
+        Size: =14
+        Text: ="Your machine request has been successfully submitted. Thank you."
+        Width: =552
+        X: =356
+        Y: =118
+        ZIndex: =4
+
+    Group1_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =4
+
+        lblHeaderCS_1 As label:
+            Align: =Align.Center
+            Color: =Color.White
+            Fill: =Color.Black
+            Height: =60
+            Size: |
+                =18
+            Text: ="Machine Ordering"
+            Width: =1366
+            ZIndex: =1
+
+        lblUserCS_1 As label:
+            Align: =Align.Right
+            Color: =Color.Gray
+            Text: ="Hello, " & User().FullName
+            Width: =200
+            X: =1160
+            ZIndex: =2
+
+        imglogoCS_1 As image:
+            Height: =60
+            Image: |-
+                ="https://images-us-prod.cms.commerce.dynamics.com/cms/api/qbvttlwqcm/imageFileData/MA20RY?ver=c4b6&m=6q=100"
+            Width: =200
+            ZIndex: =3
+
+    btnSuccess As button:
+        Fill: =RGBA(0, 0, 0, 1)
+        OnSelect: =Clear(CompareList);Navigate('Main Screen',ScreenTransition.None)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="OK"
+        Width: =260
+        X: =553
+        Y: =572
+        ZIndex: =5
+
+    FormViewer1 As formViewer:
+        DataSource: ='Machine order'
+        Height: =310
+        Item: =frmMachineOrder.LastSubmit
+        NumberOfColumns: =1
+        X: =272
+        Y: =230
+        ZIndex: =6
+
+        "'Machine Name_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="MachineName"
+            Default: =ThisItem.'Machine Name'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Machine order'],DataSourceInfo.DisplayName,'Machine Name')
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =800
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+            DataCardKey12 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue12.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue12 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey12.X + DataCardKey12.Width
+                Y: =10
+                ZIndex: =2
+
+        Price_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Price"
+            Default: =ThisItem.Price
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Machine order'],DataSourceInfo.DisplayName,Price)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =true
+            Width: =800
+            X: =0
+            Y: =1
+            ZIndex: =7
+
+            DataCardKey13 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue13.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue13 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey13.X + DataCardKey13.Width
+                Y: =10
+                ZIndex: =2
+
+        "'Requested by_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Requestedby"
+            Default: =ThisItem.'Requested by'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Machine order'],DataSourceInfo.DisplayName,'Requested by')
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =800
+            X: =0
+            Y: =2
+            ZIndex: =7
+
+            DataCardKey14 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue14.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue14 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey14.X + DataCardKey14.Width
+                Y: =10
+                ZIndex: =2
+
+        "'Request Date_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="RequestDate"
+            Default: =ThisItem.'Request Date'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Machine order'],DataSourceInfo.DisplayName,'Request Date')
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =800
+            X: =0
+            Y: =3
+            ZIndex: =7
+
+            DataCardKey15 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue15.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue15 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey15.X + DataCardKey15.Width
+                Y: =10
+                ZIndex: =2
+
+        Approver_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Approver"
+            Default: =ThisItem.Approver
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Machine order'],DataSourceInfo.DisplayName,Approver)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =800
+            X: =0
+            Y: =4
+            ZIndex: =7
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue16.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue16 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey16.X + DataCardKey16.Width
+                Y: =10
+                ZIndex: =2
+
+        Comments_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Comments"
+            Default: =ThisItem.Comments
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Machine order'],DataSourceInfo.DisplayName,Comments)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =800
+            X: =0
+            Y: =5
+            ZIndex: =7
+
+            DataCardKey17 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue17.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue17 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey17.X + DataCardKey17.Width
+                Y: =10
+                ZIndex: =2
+
